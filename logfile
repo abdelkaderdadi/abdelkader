@@ -1,0 +1,38 @@
+2024-11-22 14:06:23.471 CET [11405] LOG:  starting PostgreSQL 17.0 on aarch64-unknown-linux-android, compiled by Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262), 64-bit
+2024-11-22 14:06:23.472 CET [11405] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-22 14:06:23.474 CET [11405] LOG:  listening on Unix socket "/data/data/com.termux/files/usr/tmp/.s.PGSQL.5432"
+2024-11-22 14:06:23.480 CET [11410] LOG:  database system was shut down at 2024-11-22 14:05:31 CET
+2024-11-22 14:06:23.489 CET [11405] LOG:  database system is ready to accept connections
+2024-11-22 14:06:56.239 CET [11569] FATAL:  database "u0_a536" does not exist
+2024-11-22 14:11:23.581 CET [11408] LOG:  checkpoint starting: time
+2024-11-22 14:11:25.200 CET [11831] ERROR:  syntax error at or near "psql" at character 1
+2024-11-22 14:11:25.200 CET [11831] STATEMENT:  psql
+	CREATE TABLE users (
+	    id SERIAL PRIMARY KEY,
+	    name VARCHAR(100),
+	    email VARCHAR(100)
+	);
+2024-11-22 14:11:25.207 CET [11831] ERROR:  relation "users" does not exist at character 13
+2024-11-22 14:11:25.207 CET [11831] STATEMENT:  INSERT INTO users (name, email) VALUES 
+	('Abdelkader', 'minadadi125@gmail.com');
+2024-11-22 14:12:54.446 CET [11831] ERROR:  syntax error at or near "psql" at character 1
+2024-11-22 14:12:54.446 CET [11831] STATEMENT:  psql
+	CREATE TABLE users (
+	    id SERIAL PRIMARY KEY,
+	    name VARCHAR(100),
+	    email VARCHAR(100)
+	);
+2024-11-22 14:13:01.119 CET [11408] LOG:  checkpoint complete: wrote 967 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=97.357 s, sync=0.162 s, total=97.539 s; sync files=310, longest=0.008 s, average=0.001 s; distance=4520 kB, estimate=4520 kB; lsn=0/1954230, redo lsn=0/19541A0
+2024-11-22 14:13:33.809 CET [11831] ERROR:  relation "users" does not exist at character 13
+2024-11-22 14:13:33.809 CET [11831] STATEMENT:  INSERT INTO users (name, email) VALUES ('Abdelkader', 'minadadi125@gmail.com');
+2024-11-22 14:14:41.133 CET [11831] ERROR:  relation "users" already exists
+2024-11-22 14:14:41.133 CET [11831] STATEMENT:  CREATE TABLE users (
+	    id SERIAL PRIMARY KEY,
+	    name VARCHAR(100),
+	    email VARCHAR(100)
+	);
+2024-11-22 14:15:30.544 CET [11831] ERROR:  syntax error at or near "[" at character 1
+2024-11-22 14:15:30.544 CET [11831] STATEMENT:  [200~
+	INSERT INTO users (name, email) VALUES ('Abdelkader', 'minadadi125@gmail.com');
+2024-11-22 14:16:23.132 CET [11408] LOG:  checkpoint starting: time
+2024-11-22 14:16:28.214 CET [11408] LOG:  checkpoint complete: wrote 51 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.049 s, sync=0.021 s, total=5.083 s; sync files=40, longest=0.003 s, average=0.001 s; distance=151 kB, estimate=4083 kB; lsn=0/197A130, redo lsn=0/197A0D8
